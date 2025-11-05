@@ -1,15 +1,28 @@
-﻿namespace DotnetFandamental.ConsoleAppNotTopLevel
+﻿using static System.Net.Mime.MediaTypeNames;
+
+namespace DotnetFandamental.ConsoleAppNotTopLevel
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+            //C# Collection
+            string text = "apple,banana,grape";
+
+            string[] fruits = text.Split(',');
+
+            foreach (string fruit in fruits)
+            {
+                Console.WriteLine(fruit);
+            }
+
 
             try
             {
-
                 do
                 {
+                    string str = "asdasda";
+                    str.Replace("World", "C#");
                     Console.WriteLine("What is your phoneNumber?");
                     string phoneNumber = Console.ReadLine() ?? "";
                     phoneNumber = FormatMobileNumber(phoneNumber);
@@ -90,6 +103,12 @@
                 return false;
         }
 
+
+        /// <summary>
+        ///sadjkfajsdfbfj 
+        /// </summary>
+        /// <param name="phoneNumber">sadhkasj</param>
+        /// <returns>i will return correct phonenumber format</returns>
         static string FormatMobileNumber(string phoneNumber)
         {
             //Reusable Code
