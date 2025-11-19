@@ -28,42 +28,91 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            textBox1 = new TextBox();
+            userNameLabel = new Label();
+            userNameTextBox = new TextBox();
+            loginButton = new Button();
+            passwordTextBox = new TextBox();
+            passwordLabel = new Label();
+            dayOfWeekLabel = new Label();
             SuspendLayout();
             // 
-            // label1
+            // userNameLabel
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(37, 6);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
+            userNameLabel.AutoSize = true;
+            userNameLabel.Location = new Point(12, 10);
+            userNameLabel.Name = "userNameLabel";
+            userNameLabel.Size = new Size(60, 15);
+            userNameLabel.TabIndex = 0;
+            userNameLabel.Text = "Username";
             // 
-            // textBox1
+            // userNameTextBox
             // 
-            textBox1.Location = new Point(78, 7);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 1;
+            userNameTextBox.Location = new Point(78, 7);
+            userNameTextBox.Name = "userNameTextBox";
+            userNameTextBox.Size = new Size(195, 23);
+            userNameTextBox.TabIndex = 1;
+            // 
+            // loginButton
+            // 
+            loginButton.Location = new Point(12, 93);
+            loginButton.Name = "loginButton";
+            loginButton.Size = new Size(261, 38);
+            loginButton.TabIndex = 2;
+            loginButton.Text = "Login";
+            loginButton.UseVisualStyleBackColor = true;
+            loginButton.Click += button1_Click;
+            // 
+            // passwordTextBox
+            // 
+            passwordTextBox.Location = new Point(78, 47);
+            passwordTextBox.Name = "passwordTextBox";
+            passwordTextBox.Size = new Size(195, 23);
+            passwordTextBox.TabIndex = 4;
+            // 
+            // passwordLabel
+            // 
+            passwordLabel.AutoSize = true;
+            passwordLabel.Location = new Point(12, 50);
+            passwordLabel.Name = "passwordLabel";
+            passwordLabel.Size = new Size(57, 15);
+            passwordLabel.TabIndex = 3;
+            passwordLabel.Text = "Password";
+            // 
+            // dayOfWeekLabel
+            // 
+            dayOfWeekLabel.AutoSize = true;
+            dayOfWeekLabel.Location = new Point(12, 141);
+            dayOfWeekLabel.Name = "dayOfWeekLabel";
+            dayOfWeekLabel.Size = new Size(55, 15);
+            dayOfWeekLabel.TabIndex = 5;
+            dayOfWeekLabel.Text = "روز هفته: ";
+            dayOfWeekLabel.Click += dayOfWeekLabel_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(textBox1);
-            Controls.Add(label1);
+            ClientSize = new Size(285, 165);
+            Controls.Add(dayOfWeekLabel);
+            Controls.Add(passwordTextBox);
+            Controls.Add(passwordLabel);
+            Controls.Add(loginButton);
+            Controls.Add(userNameTextBox);
+            Controls.Add(userNameLabel);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private TextBox textBox1;
+        private Label userNameLabel;
+        private TextBox userNameTextBox;
+        private Button loginButton;
+        private TextBox passwordTextBox;
+        private Label passwordLabel;
+        private Label dayOfWeekLabel;
     }
 }

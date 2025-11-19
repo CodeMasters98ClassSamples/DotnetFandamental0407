@@ -14,6 +14,7 @@ namespace DotnetFandamental.ConsoleAppNotTopLevel
             //Type(نوع) nameOfVaribale = intialValue(مقدار دهی اولیه);
             string ageStr = "25";
             int age = int.Parse(ageStr);
+            
             Convert.ToInt32(ageStr);
             long ageLong = long.Parse(ageStr);
             decimal.Parse(ageStr);
