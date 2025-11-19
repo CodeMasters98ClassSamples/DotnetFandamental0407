@@ -12,10 +12,14 @@ namespace DotnetFandamental.WindowsFormAppPanel
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string access1 = "admin,1234";
+            string access2 = "admin2,12345";
+            string[] accessArray = access1.Split(',');
+            string[] accessArray2 = access2.Split(',');
 
             List<UserLogin> users = new List<UserLogin>();
-            users.Add(new UserLogin() { Password = "1234", UserName = "admin" });
-            users.Add(new UserLogin() { Password = "12345", UserName = "admin2" });
+            users.Add(new UserLogin() { Password = accessArray[1], UserName = accessArray[0] });
+            users.Add(new UserLogin() { Password = accessArray2[1], UserName = accessArray2[0] });
 
             //string str = Console.ReadLine();
             string username = userNameTextBox.Text;
